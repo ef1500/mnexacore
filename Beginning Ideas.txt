@@ -1,0 +1,64 @@
+Beginning Ideas for mnexacore
+<ef1500>
+
+Objective: Create a simple language to generate flashcards, It must take the code and convert it into C++ code,
+where the next files can process it. 
+
+Initial Idea:
+
+<Flashcards>
+
+[Init]
+$Title "title"
+$Author "author"
+
+[Begin]
+# <type> is the response type, which I hope to implement later on, if I get a community and support
+# the only "type" I have so far is multiple choice, and it's denoted as "mtc"
+# the number in the brackets is the question's Root ID, which will be used to create similar questions (hopefully)
+# also, I envision the Root ID to be used in the retriveal of answers.
+
+# Question Template Idea one
+$q<type> "Question?" [0000]
+
+# Second Idea - Added a name "A" because The questions are the equivalent of std::vector and this would make it easier to store stuff in
+# Question Template Idea Two
+$q<type> A "Question?" [0000]
+
+[End]
+
+Now that I think about it, I feel that I could add some sort of less intensive language to make flashcards.
+
+I could use SQLite database implementation. Yeah, I'm gonna use that.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
