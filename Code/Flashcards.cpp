@@ -12,6 +12,7 @@ using namespace std;
 
 class Flashcard
 	public:
+	{
 
 		//Declaring the different parts of the flashcards
 		string Question;
@@ -19,3 +20,5 @@ class Flashcard
 		string image;
 
 		int ID;
+
+	};
