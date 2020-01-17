@@ -33,7 +33,7 @@ I could use SQLite database implementation. Yeah, I'm gonna use that.
 
 
 
-
+After some time, I've realized that I'll be using a spacial repitition algorithm.
 
 
 
