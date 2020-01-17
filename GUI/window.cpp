@@ -1,24 +1,67 @@
-//Declare Headers
 #include <CtrlLib/CtrlLib.h>
 
  
-//Declare namespaces
+
 using namespace Upp;
 
  
-//Declare our little function
-//This is the equivelant of int main()
+
+struct MyAppWindow : TopWindow {
+
+    MenuBar menu;
+
+ 
+
+    void Exit() {
+
+        if(PromptOKCancel("Exit Mnexacore?"))
+
+            Break();
+
+    }
+
+ 
+
+    void SubMenu(Bar& bar) {
+
+        bar.Add("Exit", [=] { Exit(); });
+
+    }
+
+ 
+
+    void MainMenu(Bar& bar) {
+
+        bar.Sub("Options", [=](Bar& bar) { SubMenu(bar); });
+
+    }
+
+ 
+
+    typedef MyAppWindow CLASSNAME;
+
+ 
+
+    MyAppWindow() {
+
+        Title("Mnexacore").Sizeable();
+
+        AddFrame(menu);
+
+        menu.Set([=](Bar& bar) { MainMenu(bar); });
+
+    }
+
+};
+
+ 
 
 GUI_APP_MAIN
 
 {
 
-    TopWindow w;
-    
-    w.Title("Mnexacore").MinimizeBox().Sizeable();
+    MyAppWindow app;
 
-    w.SetRect(0, 0, 200, 300);
-
-    w.Run();
+    app.Run();
 
 }
