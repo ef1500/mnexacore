@@ -7,6 +7,8 @@ using namespace Upp;
 
  
 //Declare our little function
+//This is the equivelant of int main()
+
 GUI_APP_MAIN
 
 {
