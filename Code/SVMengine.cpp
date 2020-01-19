@@ -96,8 +96,13 @@ int main(int, char**)
         const float* v = sv.ptr<float>(i);
         circle(image,  Point( (int) v[0], (int) v[1]), 6, Scalar(128, 128, 128), thickness);
     }
+
+    //what I'm going to do here is save the image, and have the GUI show the image rather
+    //the svm.
     imwrite("result.png", image);        // save the image
-    imshow("SVM Simple Example", image); // show it to the user
+
+    //imshow("SVM Simple Example", image); // show it to the user
+
     waitKey();
     return 0;
 }
