@@ -7,4 +7,6 @@
 #include <cstdio>
 #include <sqlite3.h>
 
-//So far, I don't know how to do this, which is epic
+//This file is supposed to act as a "middle man" between the GUI and the SVM.
+//It transports data to and from the SVM, and to any other files that may require
+//The database.
